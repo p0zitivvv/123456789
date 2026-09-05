@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grammar для Аяу</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -16,11 +21,29 @@
             <h1 class="title">Grammar для Аяу</h1>
             <p class="subtitle">Уроки грамматики и аудио</p>
         </header>
-        
+
+        <div class="tabs">
+            <button class="tab-btn grammar-btn active" data-tab="grammar">Grammar</button>
+            <button class="tab-btn vocab-btn" data-tab="vocab">Vocabulary</button>
+        </div>
+
         <main class="audio-list" id="audio-list">
             <!-- Audio items will be injected here by JS -->
         </main>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Funny Proposal Modal -->
+    <div class="modal-overlay" id="proposal-modal">
+        <div class="modal-content">
+            <img src="фотка/аяайтик.jpeg" alt="Аяайтик" class="modal-photo"
+                onerror="this.src='фотка/93c540a1cfd72617240d7d96619dc9f0.jpg'">
+            <h2 class="modal-title" id="modal-text">Ты выйдешь замуж за Айтуара? 💍</h2>
+            <div class="modal-buttons" id="modal-buttons">
+                <button class="modal-btn yes-btn" id="btn-yes">Да</button>
+                <button class="modal-btn no-btn" id="btn-no">Нет</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
